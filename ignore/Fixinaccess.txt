@@ -1,0 +1,4 @@
+
+SourceBook repeats in tags
+
+update tags set tagname = 'Text' WHERE tagname in ('TextC', 'Text2') 

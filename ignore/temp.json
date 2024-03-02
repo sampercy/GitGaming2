@@ -1,0 +1,30 @@
+[
+  {
+      "itemsource": "general",
+      "tagkey": "40278",
+      "itemcode": "templates",
+      "sequence": "0",
+      "tagname": ":boldend",
+      "tagvalue": "</span>",
+      "sortlevel": "99"
+  },
+  {
+      "itemsource": "general",
+      "tagkey": "40276",
+      "itemcode": "templates",
+      "sequence": "0",
+      "tagname": ":tempname",
+      "tagvalue": "<<#surround|bold|<<Name>>>>xxx",
+      "sortlevel": "99",
+      "changed": 1
+  },
+  {
+      "itemsource": "general",
+      "tagkey": "40277",
+      "itemcode": "templates",
+      "sequence": "0",
+      "tagname": ":boldstart",
+      "tagvalue": "<span style='font-weight:bold'>",
+      "sortlevel": "99"
+  }
+]

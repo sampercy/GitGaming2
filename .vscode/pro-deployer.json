@@ -1,0 +1,26 @@
+{
+	"uploadOnSave": true,
+	"autoDelete": false,
+	"checkGitignore": false,
+	"activeTargets": [
+		"Gamingx"
+	],
+	"concurrency": 5,
+	"ignore": [
+		".git/**/*",
+		".vscode/**/*",
+		"deleted/**/*",
+		"ignore/**/*"
+	],
+	"targets": [
+		{
+			"name": "Gaming",
+			"type": "ftp",
+			"host": "ftp.lincpercy.com",
+			"user": "gaming@sampercy.com",
+			"password": "jcDYUV9XwiM7z5",
+			"port": 21,
+			"dir": "/"
+		}
+	]
+}

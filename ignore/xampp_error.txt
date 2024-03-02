@@ -1,0 +1,50 @@
+
+
+When MySQL won't start, it seems to be just a necessity to remove three files from here:
+
+C:\xampp\mysql\data
+
+Namely:
+
+ib_logfile0
+ib_logfile1
+aria_log_control
+
+Some other sugeestions help or do not help, but the backup folder does seem to be valid, just missing the folders for other dbs, and the file:
+ibdata1
+
+Try to remember to launch xampp as admininstrator
+
+If not, shut down the mysql service from xampp.
+
+
+Useful page:
+
+
+https://stackoverflow.com/questions/18022809/how-can-i-solve-error-mysql-shutdown-unexpectedly
+
+
+UPDATE APRIL (2022)
+Rename folder mysql/data to mysql/data_old
+Make a copy of mysql/backup folder and name it as mysql/data
+Copy all your database folders and mysql folder from mysql/data_old into mysql/data
+Copy mysql/data_old/ibdata1 file into mysql/data folder
+Start MySQL from XAMPP control panel
+
+>>>>>>>>
+
+When you're not running XAMPP as an administrator, shutting down MySQL frequently causes corruption which means you have to repair or delete your tables. 
+To avoid this you need to either run XAMPP as an administrator, or use the proper command prompt method for shutting down MySQL.
+
+You can delete ibdata1 as Kratos suggests, but this can leave you with a broken database as other pieces of your database are still in the /mysql/data/ folder. 
+In my case, this residual data stopped me successfully installing WordPress.
+
+A cleaner way of undoing the damage is to revert your whole /mysql/data/ folder. 
+Windows has built-in folder versioning — right click on /mysql/data/ and select Restore previous versions. 
+You can then delete the current contents of the folder and replace it with the older version's contents.
+
+Addendum: To ensure that you don't forget to run XAMPP as an administrator you can right click the XAMPP shortcut, 
+  go to Properties, then Advanced, and finally tick Run as administrator.
+
+
+>> etc
